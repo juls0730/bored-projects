@@ -1,0 +1,36 @@
+body {
+  min-height: 90vh;
+  background-color: #111111;
+  padding: 0.25rem;
+  color: #33FF00;
+  line-height: 1.5em;
+  font-size: 1.375em;
+  font-family: monospace;
+}
+
+.terminal::before {
+  content: "$";
+  margin-right: 0.5rem;
+}
+
+.terminal {
+  width: fit-content;
+  content: "a";
+}
+
+.terminal::after {
+  animation: blinker 1s ease-in-out infinite;
+  content: "_";
+}
+
+@keyframes blinker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

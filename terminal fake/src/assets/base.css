@@ -6,6 +6,24 @@ body {
   line-height: 1.5em;
   font-size: 1.375em;
   font-family: monospace;
+  text-transform: uppercase;
+  cursor: text;
+    
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .terminal::before {
@@ -15,12 +33,21 @@ body {
 
 .terminal {
   width: fit-content;
-  content: "a";
 }
 
-.terminal::after {
+.terminal-blink::after {
   animation: blinker 1s ease-in-out infinite;
   content: "_";
+}
+
+.typing::after {
+  animation: blinker 1.3s ease-in-out infinite;
+  content: "_";
+}
+
+p {
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
 }
 
 @keyframes blinker {

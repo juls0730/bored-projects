@@ -1,0 +1,318 @@
+:root {
+  --google-bg-color: #202124;
+  --google-dullgray: #9aa0a6;
+  --google-gray: #bdc1c6;
+  --google-linkblue: #8ab4f8; 
+  --google-visitedpurple: #c58af9;
+  --user-gray: #666666;
+
+  /* "modular" sizing and colors */
+  --wdith-1: 280px;
+  --wdith-2: 180px;
+  --wdith-3: 240px;
+  --wdith-4: 320px;
+  --wdith-5: 360px;
+  --height-1: 20px;
+  --height-2: 14px;
+  --height-3: 14px;
+  --height-4: 14px;
+  --height-5: 14px;
+
+  --color-link: #8ab4f8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: var(--google-dullgray);
+  background-color: var(--google-bg-color);
+}
+
+header {
+  padding: 1.25rem;
+  min-height: 4em;
+  height: max-content;
+  display: flex;
+  padding-bottom: 0;;
+}
+
+.float-left {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-left: 0.75rem;
+}
+
+.float-right {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+}
+
+.user-icon {
+  background-color: var(--google-dullgray);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.settings-icon {
+  margin-right: 1rem;
+  background-color: var(--google-dullgray);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.apps-icon {
+  margin-right: 1.25rem;
+  background-color: var(--google-dullgray);
+  width: 4px;
+  height: 4px;
+  /* tysm css battles */
+  box-shadow: 8px 0px var(--google-dullgray), -8px 0px var(--google-dullgray), 0px 8px var(--google-dullgray), 0px -8px var(--google-dullgray), 8px 8px var(--google-dullgray), -8px 8px var(--google-dullgray), 8px -8px var(--google-dullgray), -8px -8px var(--google-dullgray);
+}
+
+.search {
+  margin-left: 1.75rem;
+  height: 50px;
+  width: 695px;
+  border-radius: 24px;
+  background-color: var(--google-bg-color);
+  border: 1px solid #5f6368;
+}
+
+.search-icon {
+  display: absolute;
+  transform: translateX(-40px) translateY(5px);
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  color: #8ab4f8;
+}
+
+.options {
+  height: 60px;
+  width: 100%;
+}
+
+hr {
+  margin-top: 0;
+}
+
+.items {
+  transform: translateY(25px) translateX(120px);
+}
+
+.selected {
+  display: inline-block;
+  margin-right: 0.75rem;
+  height: 25px;
+  width: 90px;
+  background-color: #8ab4f8;
+  border-radius: 24px;
+}
+
+.selected::after {
+  content: '';
+  display: block;
+  background-color: #6481be;
+  height: 4px;
+  width: 90px;
+  transform: translateY(33px);
+}
+
+.notselected {
+  display: inline-block;
+  margin-right: 0.75rem;
+  height: 25px;
+  background-color: var(--google-dullgray);
+  border-radius: 24px;
+}
+
+#first {
+  width: 80px;
+}
+
+#second {
+  width: 110px;
+}
+
+#third {
+  width: 70px;
+}
+
+#forth {
+  width: 120px;
+}
+
+#fifth {
+  width: 160px;
+}
+
+.query-time {
+  display: inline-block;
+  margin-right: 0.75rem;
+  transform: translateY(10px) translateX(150px);
+  width: 100px;
+  height: 16px;
+  background-color: var(--google-dullgray);
+  border-radius: 24px;
+  box-shadow: 350px 0 var(--google-dullgray);
+}
+
+.query-time::before {
+  display: inline-block;
+  content: "";
+  width: 90px;
+  height: 16px;
+  background-color: var(--google-dullgray);
+  border-radius: 24px;
+  transform: translateX(110px) translateY(-2px);
+}
+
+.query-time::after {
+  display: inline-block;
+  content: "";
+  width: 120px;
+  height: 16px;
+  background-color: var(--google-dullgray);
+  border-radius: 24px;
+  transform: translateY(-25px) translateX(215px);
+}
+
+.result-item {
+  width: var(--wdith-1);
+  height: var(--height-1);
+  background-color: var(--color-link);
+  transform: translateY(30px) translateX(150px);
+  border-radius: 24px;
+}
+
+.result-item::before {
+  display: block;
+  box-sizing: border-box;
+  content: "";
+  width: var(--wdith-2);
+  height: var(--height-2);
+  background-color: var(--google-gray);
+  transform: translateY(-20px);
+  border-radius: 24px;
+}
+
+.result-description {
+  box-sizing: border-box;
+  width: var(--wdith-3);
+  height: var(--height-3);
+  background-color: var(--google-gray);
+  transform: translateY(13px);
+  border-radius: 24px;
+}
+
+.result-description::before {
+  content: "";
+  box-sizing: border-box;
+  width: var(--wdith-4);
+  height: var(--height-4);
+  display: block;
+  background-color: var(--google-gray);
+  transform: translateX(250px);
+  border-radius: 24px;
+}
+
+.result-description::after {
+  content: "";
+  box-sizing: border-box;
+  width: var(--wdith-5);
+  height: var(--height-5);
+  display: block;
+  background-color: var(--google-gray);
+  transform: translateX(0px) translateY(8px);
+  border-radius: 24px;
+  margin-bottom: 30px;
+}
+
+#two {
+  transform: translateY(130px) translateX(150px);
+  --wdith-2: 150px;
+  --wdith-1: 180px;
+  --color-link: var(--google-visitedpurple);
+  --wdith-5: 70px;
+}
+
+#three {
+  transform: translateY(230px) translateX(150px);
+  --wdith-2: 220px;
+  --wdith-1: 250px;
+  --wdith-5: 120px;
+}
+
+#four {
+  transform: translateY(330px) translateX(150px);
+  --wdith-2: 240px;
+  --wdith-1: 290px;
+  --wdith-5: 170px;
+}
+
+#five {
+  transform: translateY(430px) translateX(150px);
+  --wdith-2: 110px;
+  --wdith-1: 210px;
+  --wdith-5: 220px;
+}
+
+#six {
+  transform: translateY(530px) translateX(150px);
+  --wdith-2: 230px;
+  --wdith-1: 320px;
+  --wdith-5: 260px;
+}
+
+#seven {
+  transform: translateY(630px) translateX(150px);
+  --wdith-2: 230px;
+  --wdith-1: 380px;
+  --wdith-5: 236px;
+}
+
+#eight {
+  transform: translateY(730px) translateX(150px);
+  --wdith-2: 270px;
+  --wdith-1: 340px;
+  --wdith-5: 220px;
+}
+
+#nine {
+  transform: translateY(830px) translateX(150px);
+  --wdith-2: 143.4px;
+  --wdith-1: 223.2px;
+  --wdith-5: 123px;
+}
+
+#ten {
+  transform: translateY(930px) translateX(150px);
+  --wdith-2: 123.4px;
+  --wdith-1: 273.2px;
+  --wdith-5: 183px;
+}
+
+.fake-pagnate {
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #fff;
+  height: auto;
+  width: 1.5em;
+  transform: translateY(1030px) translateX(320px);
+  margin-bottom: 0.5rem;
+}
+
+.fake-pagnate::after {
+  content: '';
+  height: 24px;
+  width: 24px;
+  display: block;
+  transform: translateY(-27px) translateX(207px);
+  margin-bottom: 0.5rem;
+}
